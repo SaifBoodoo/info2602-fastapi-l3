@@ -36,9 +36,6 @@ class Todo(SQLModel, table=True):
     user: User = Relationship(back_populates='todos') # relationship to the User model
     categories: list['Category'] = Relationship(back_populates=("todos"), link_model=TodoCategory)
 
-    ## Task 3.4 implementation should go here as well
-
-    # Task 5.2 code should go here
     
     
 class Category(SQLModel, table=True):
